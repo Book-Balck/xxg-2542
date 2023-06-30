@@ -344,7 +344,7 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/axios.min.js"></script>
     <script>
-        (() => {
+        ( function(){
 
             //调用函数渲染第一页的课程
             getCourse();
@@ -395,7 +395,7 @@
                         </a>
                     </li>`;
                     for (let i = 1; i <= res.data.pageSum; i++) {
-                        pageData += ` <li class="${i === res.data.pageNo ? 'active' : ''}"><a href="#">${i}</a></li>`;
+                        pageData += ` <li class="${i === res.data.pageNo ? 'active' : ''}"><a href="#"  data-page="${i}">${i}</a></li>`;
                     }
                     pageData += `
                     <li>
