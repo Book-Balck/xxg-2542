@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- 个人修改样式，下行添加style自己样式 -->
+    <style>
+        body {
+            padding-top: 50px;
+        }
+
+        .carousel-xxg img {
+            width: 100%;
+        }
+
+        .main-content {
+            margin-top: 20px;
+        }
+
+        .courses img {
+            width: 100%;
+        }
+
+        .page-footer {
+            margin-top: 40px;
+            padding: 40px 0;
+            color: #fff;
+            background: #333;
+        }
+
+        .page-footer a {
+            color: #fff;
+        }
+
+        .page-footer h4 {
+            font-size: 1.2em;
+        }
+
+        .page-footer ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer-copyright {
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航条 -->
+    <nav class="navbar navbar-inverse navbar-atguigu navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <!-- 无障碍阅读规范 -->
+                    <span class="sr-only">Toggle navigation</span>
+                    <!-- 页面收起时变为菜单按钮 -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Boos Balck</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">教程</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">视频 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">JAVA EE</a></li>
+                            <li><a href="#">PHP</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">移动端k</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">微信小程序</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </span>
+                    </div><!-- /input-group -->
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" data-toggle="modal" data-target="#loginModal">登录</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#loginModaltwo">注册</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- 轮播图模块 -->
+    <div id="carousel-example-generic" class="carousel slide carousel-xxg" data-ride="carousel">
+        <!-- 三个圆点 -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- 轮播图内容 -->
+        <!-- 
+            视口宽度>=992像素  使用play01、02、03
+            视口宽度768~992像素   使用play01-sm、02-sm、03-sm
+            视口宽度768像素一下  使用play01-xs、02-xs、03-xs
+         -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <picture>
+                    <source srcset="./img/play01.jpg" media="(min-width:992px)">
+                    <source srcset="./img/play01-sm.jpg" media="(min-width:768px)">
+                    <img src="./img/play01-xs.jpg" alt="">
+                </picture>
+                <div class="carousel-caption">
+                    <h3>第一部分</h3>
+                    <p>不服一为愿已胜没，的为那人太的光得了三大尤极者拿投你，冈不因韩人友秦，于郭年衣风低友之赐色，者磊己。</p>
+                </div>
+            </div>
+            <div class="item">
+                <picture>
+                    <source srcset="./img/play02.jpg" media="(min-width:992px)">
+                    <source srcset="./img/play02-sm.jpg" media="(min-width:768px)">
+                    <img src="./img/play02-xs.jpg" alt="">
+                </picture>
+                <div class="carousel-caption">
+                    <h3>第二部分</h3>
+                    <p>听九则谢制文评谢他身善韩文找那己，纯后曾答屯意面能是考竟有喜尚，览于李艳回不圣决向司锐助救皮圣得而。</p>
+                </div>
+            </div>
+            <div class="item">
+                <picture>
+                    <source srcset="./img/play03.jpg" media="(min-width:992px)">
+                    <source srcset="./img/play03-sm.jpg" media="(min-width:768px)">
+                    <img src="./img/play03-xs.jpg" alt="">
+                </picture>
+                <div class="carousel-caption">
+                    <h3>第三部分</h3>
+                    <p>过水我一并杂同圣中面来仆区说惜终失词，言没国只对和先杨而家仆看绛全亲尘次就人，听对憾不，落入郭，吾。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 左右箭头 -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="container main-content">
+        <!-- 路径导航  面包屑 -->
+        <ol class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">课程</a></li>
+            <li class="active">推荐课程</li>
+        </ol>
+        <!-- 课程列表 -->
+        <!-- 
+            栅格系统
+            超小屏幕   768像素以下   xs  一行一个，每个12份
+            小屏幕     768~992像素   sm  一行两个，每个6份
+            中等屏幕   992~1200像素  md  一行三个，每个4份
+            大屏幕     1200像素以上  lg  一行四个，每个3份
+         -->
+        <div class="courses">
+            <div class="row" id="courseBox">
+                <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail">
+                        <img src="./img/html5.jpg" alt="...">
+                        <div class="caption">
+                            <h3>HTML5</h3>
+                            <p>满别的才为藏郭井郭年价尝他最事就设厅范。</p>
+                            <p><a href="#" class="btn btn-success" role="button">立即购买</a> 
+                                <a href="#"class="btn btn-info" role="button">在线试看</a>
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- 分页 -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination" id="pageBox">
+            </ul>
+        </nav>
+    </div>
+
+    <!--页脚 -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-nav">
+                <!-- 768px以下  一行一个，一个12份  xs
+                     768~992px  一行两个，一个6份   sm
+                     992px以上  一行四个，一个3份   md  lg
+                -->
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <h4>用户</h4>
+                        <ul>
+                            <li><a href="#">账户个人资料</a></li>
+                            <li><a href="#">下载中心</a></li>
+                            <li><a href="#">订单跟踪</a></li>
+                            <li><a href="#">用户评价</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <h4>教育</h4>
+                        <ul>
+                            <li><a href="#">账户个人资料</a></li>
+                            <li><a href="#">下载中心</a></li>
+                            <li><a href="#">订单跟踪</a></li>
+                            <li><a href="#">用户评价</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <h4>公司</h4>
+                        <ul>
+                            <li><a href="#">账户个人资料</a></li>
+                            <li><a href="#">下载中心</a></li>
+                            <li><a href="#">订单跟踪</a></li>
+                            <li><a href="#">用户评价</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <h4>开发人员</h4>
+                        <ul>
+                            <li><a href="#">账户个人资料</a></li>
+                            <li><a href="#">下载中心</a></li>
+                            <li><a href="#">订单跟踪</a></li>
+                            <li><a href="#">用户评价</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="col-x.s-12">
+                    <h5>&copy;河北传媒学院计算机科学与技术专接本2班</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 登录模态框 -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="loginModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">登录</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">邮箱：</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">密码：</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> 记住密码
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">登录</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- 注册模态框 -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="loginModaltwo">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">注册</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">请输入邮箱：</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="NewEmail">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputName1">请输入用户名：</label>
+                            <input type="name" class="form-control" id="exampleInputName1" placeholder="NewName">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">请输入密码：</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="NewPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword2">请再次输入密码：</label>
+                            <input type="password" class="form-control" id="exampleInputPassword2"
+                                placeholder="NewPassword">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> 请勾选同意协议按钮
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">注册</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- 引入JS脚本,先Jquery，后bootstra -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/axios.min.js"></script>
+    <script>
+        (() => {
+
+            //调用函数渲染第一页的课程
+            getCourse();
+
+            //给页码按钮A标签监听事件
+            $('#pageBox').on('click', 'a', function(event){
+                //阻止浏览器默认行为
+                event.preventDefault();
+                //根据页码获取课程列表并重新渲染
+                getCourse(this.dataset.page);
+            });
+            //获取课程列表信息以及分页信息，参数1表示第一页，默认值是1;
+            function getCourse(no = 1, size = 8) {
+                //使用axios 向后端API发送请求获取数据
+                axios.get('http://api.fuming.site:54254/course', {
+                    params: {
+                        pageNo: no,
+                        pageSize: size
+                    }
+                }).then((res) => {
+                    console.log(res.data);
+                    //渲染课程列表-------------------------
+                    let htmlData = '';
+                    res.data.data.forEach(item => {
+                        htmlData += `
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="${item.img}" alt="...">
+                            <div class="caption">
+                                <h5>${item.title}</h5>
+                                <p>
+                                    <a href="#" class="btn btn-success" role="button">立即购买</a> 
+                                    <a href="${item.href}"class="btn btn-info" role="button">在线试看</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                    });
+
+                    $('#courseBox').html(htmlData);
+
+                    //渲染分页信息 ---------------------------
+                    let pageData = `
+                    <li>
+                        <a href="#" aria-label="Previous" data-page="${res.data.pageNo - 1}">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>`;
+                    for (let i = 1; i <= res.data.pageSum; i++) {
+                        pageData += ` <li class="${i === res.data.pageNo ? 'active' : ''}"><a href="#">${i}</a></li>`;
+                    }
+                    pageData += `
+                    <li>
+                        <a href="#" aria-label="Next" data-page="${res.data.pageNo + 1}">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>`;
+                    $('#pageBox').html(pageData);
+                });
+            }
+
+
+
+        })();
+    </script>
+</body>
+
+</html>
